@@ -93,7 +93,7 @@ st.markdown(
 @st.cache_resource
 def load_model():
     try:
-        with open(ROOT_DIR / "models" / "price_model.pkl", "rb") as handle:
+        with open(ROOT_DIR / "price_model.pkl", "rb") as handle:
             return pickle.load(handle)
     except Exception:
         st.error("⚠️ Model not found. Please train the model first by running: python train_model.py")
